@@ -125,7 +125,6 @@ public class Moving_CIrcle extends JComponent implements KeyListener {
         panel.add(MovingCircleGreen);    
         frame.getContentPane().add(panel);
         final JButton button = new JButton("Start");
-        this.addKeyListener(this);
         button.addActionListener(new ActionListener() {
           @Override
           public void actionPerformed(ActionEvent e) {

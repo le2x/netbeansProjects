@@ -25,6 +25,8 @@ public class JavaApplication27 extends JComponent implements KeyListener{
     private boolean isRight = false;
     private boolean isUp = false;
     private boolean isDown = false;
+    private static int maxCardSizeX = 500;
+    private static int maxCardSizeY = 500;
     private int x, y;
      
     public JavaApplication27(int width, int height, Color color) {
@@ -41,13 +43,13 @@ public class JavaApplication27 extends JComponent implements KeyListener{
     public static void main(String... string) {
         JFrame frame = new JFrame("Moving Circle");
         JPanel panel = new JPanel();
-        final JavaApplication27 MovingCircleGreen = new JavaApplication27(500, 500, Color.MAGENTA);
+        final JavaApplication27 MovingCircleGreen = new JavaApplication27(maxCardSizeX, maxCardSizeY, Color.MAGENTA);
          panel.add(MovingCircleGreen);
          panel.setBackground(Color.black);
         frame.getContentPane().add(panel);
         frame.addKeyListener(MovingCircleGreen);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(600, 550);
+        frame.setSize(maxCardSizeX, maxCardSizeY);
         frame.setVisible(true);
     }
      
